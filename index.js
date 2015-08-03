@@ -3,7 +3,6 @@
 var bind = require('function-bind');
 var define = require('define-properties');
 var ES = require('es-abstract/es7');
-var max = Math.max;
 var slice = bind.call(Function.call, String.prototype.slice);
 
 var padRightShim = function padRight(maxLength) {
@@ -18,7 +17,7 @@ var padRightShim = function padRight(maxLength) {
 	if (fillStr === '') {
 		fillStr = ' ';
 	}
-	var intMaxLength = max(ES.ToLength(maxLength), stringLength);
+	var intMaxLength = ES.ToLength(maxLength);
 	if (intMaxLength <= stringLength) {
 		return S;
 	}
