@@ -12,15 +12,15 @@
 
 An ES7 spec-compliant `String.prototype.padRight` shim. Invoke its "shim" method to shim `String.prototype.padRight` if it is unavailable.
 
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec proposal](https://github.com/ljharb/proposal-string-pad-left-right).
+
 Most common usage:
 ```js
 var padRight = require('string.prototype.padright');
 
 assert(padRight('foo', 5, 'bar') === 'fooba');
 
-if (!String.prototype.padRight) {
-	padRight.shim();
-}
+padRight.shim();
 
 assert(padRight('foo', 2) === 'foo'.padRight(2));
 ```
