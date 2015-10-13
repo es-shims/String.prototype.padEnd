@@ -9,6 +9,8 @@ var bind = require('function-bind');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
 var functionsHaveNames = function f() {}.name === 'f';
 
+var runTests = require('./tests');
+
 test('shimmed', function (t) {
 	t.equal(String.prototype.padRight.length, 1, 'String#padRight has a length of 1');
 	t.test('Function name', { skip: !functionsHaveNames }, function (st) {
@@ -29,7 +31,7 @@ test('shimmed', function (t) {
 		st.end();
 	});
 
-	require('./tests')(bind.call(Function.call, String.prototype.padRight), t);
+	runTests(bind.call(Function.call, String.prototype.padRight), t);
 
 	t.end();
 });
