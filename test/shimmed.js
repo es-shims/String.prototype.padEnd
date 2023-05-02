@@ -1,7 +1,6 @@
 'use strict';
 
-var padRight = require('../');
-padRight.shim();
+var padRight = require('../auto');
 
 var test = require('tape');
 var defineProperties = require('define-properties');
