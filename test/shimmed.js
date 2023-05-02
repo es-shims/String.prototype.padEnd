@@ -7,7 +7,7 @@ var test = require('tape');
 var defineProperties = require('define-properties');
 var callBind = require('call-bind');
 var isEnumerable = Object.prototype.propertyIsEnumerable;
-var functionsHaveNames = function f() {}.name === 'f';
+var functionsHaveNames = require('functions-have-names')();
 
 var runTests = require('./tests');
 
@@ -26,8 +26,8 @@ test('shimmed', function (t) {
 	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
 
 	t.test('bad string/this value', { skip: !supportsStrictMode }, function (st) {
-		st.throws(function () { return padRight(undefined, 'a'); }, TypeError, 'undefined is not an object');
-		st.throws(function () { return padRight(null, 'a'); }, TypeError, 'null is not an object');
+		st['throws'](function () { return padRight(undefined, 'a'); }, TypeError, 'undefined is not an object');
+		st['throws'](function () { return padRight(null, 'a'); }, TypeError, 'null is not an object');
 		st.end();
 	});
 
