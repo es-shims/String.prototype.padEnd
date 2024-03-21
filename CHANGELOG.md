@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v3.1.6](https://github.com/es-shims/String.prototype.padEnd/compare/v3.1.5...v3.1.6) - 2024-03-21
+
+### Commits
+
+- [actions] use reusable workflows [`54902fb`](https://github.com/es-shims/String.prototype.padEnd/commit/54902fba3db6885780d0467c50026c4fb3bb0294)
+- [Deps] update `call-bind`, `define-properties`, `es-abstract` [`b545f14`](https://github.com/es-shims/String.prototype.padEnd/commit/b545f14b4d363302dfdc75f1c1886ac07f61855d)
+- [Refactor] use `es-object-atoms` where possible [`eb54e52`](https://github.com/es-shims/String.prototype.padEnd/commit/eb54e523dfbbd34c89c35905563c49067353f6bd)
+- [Dev Deps] update `aud`, `npmignore`, `tape` [`b1398f3`](https://github.com/es-shims/String.prototype.padEnd/commit/b1398f30cad11a230b58c6ac1a93b994fb96121b)
+- [Tests] use `call-bind` instead of `function-bind` [`3bae558`](https://github.com/es-shims/String.prototype.padEnd/commit/3bae558871aa3b34a6dc7a40963b7d07a6976825)
+
 ## [v3.1.5](https://github.com/es-shims/String.prototype.padEnd/compare/v3.1.4...v3.1.5) - 2023-09-04
 
 ### Commits
