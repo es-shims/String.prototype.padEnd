@@ -15,6 +15,7 @@ module.exports = function (padEnd, t) {
 
 	t.test('truncated fill string', function (st) {
 		st.equal(padEnd('a', 2, 'bc'), 'ab', 'truncates at the provided max length');
+		st.equal(padEnd('a', 7, 'bc'), 'abcbcbc', 'filler is repeated and sliced when it exceeds remaining code units');
 
 		st.end();
 	});
