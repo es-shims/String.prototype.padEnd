@@ -3,7 +3,7 @@
 var ToLength = require('es-abstract/2025/ToLength');
 var ToString = require('es-abstract/2025/ToString');
 var RequireObjectCoercible = require('es-object-atoms/RequireObjectCoercible');
-var callBound = require('call-bind/callBound');
+var callBound = require('call-bound');
 
 var $slice = callBound('String.prototype.slice');
 
